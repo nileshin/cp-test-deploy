@@ -1,0 +1,6 @@
+# this is so netlify-lambda can build our functions. Main netlify.toml is one level up
+
+[Settings]
+
+[build]
+  functions = "functions/dist"

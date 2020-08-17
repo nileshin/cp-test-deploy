@@ -1,0 +1,14 @@
+@import '../modules/_global/scss/vendor/bootstrap-mixins.scss';
+@import '../modules/_global/scss/variables.scss';
+
+.work-detail {
+  .work-detail-rte {
+    padding: 0;
+    margin-bottom: 30px;
+
+    h1, h2, h3, h4 {
+      margin-bottom: 0;
+      font-family: $font-family-sans-serif-alt
+    }
+  }
+}

@@ -1,0 +1,230 @@
+//== Brand
+
+$brand-primary       : #616161;
+$brand-primary-light : lighten($brand-primary, 18.82);
+$brand-secondary     : #B18925;
+$brand-secondary-alt : #D5A938;
+$white               : #fafafa;
+$white-alt           : #b9b9b9;
+$black               : #0a0a0a;
+$text-alt            : #919191;
+$red                 : #D56126;
+
+//== Colors
+
+/* $gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee */
+
+//== Fonts
+
+$font-family-sans-serif     : "Mercury Text G2 A", "Mercury Text G2 B", serif;
+$font-family-sans-serif-alt : "Gotham A", "Gotham B", sans-serif;
+$font-size-base             : 18px;
+$font-size-large            : $font-size-base * 1.375;
+$font-size-small            : $font-size-base * 0.875;
+$headings-font-family       : $font-family-sans-serif;
+$headings-font-weight       : 700;
+$headings-line-height       : 0.91;
+$headings-color             : inherit;
+$font-size-h1               : ceil(($font-size-base * 2.5));
+$font-size-h2               : ceil(($font-size-base * 3)); // 54
+$font-size-h3               : ceil(($font-size-base * 2)); // 36
+$font-size-h4               : ceil(($font-size-base * 1.22));
+$font-size-h5               : ceil(($font-size-base * 1));
+$font-size-h6               : ceil(($font-size-base * 0.8));
+$line-height-base           : 1.45;
+$line-height-computed       : floor(($font-size-base * $line-height-base));
+
+//== Components
+
+$padding-base-vertical   : 6px;
+$padding-base-horizontal : 12px;
+$border-radius-base      : 0;
+$border-radius-large     : 0;
+
+//== Buttons
+
+$btn-font-weight      : 700;
+$btn-primary-color    : #ffffff;
+$btn-primary-bg       : $brand-primary;
+$btn-primary-border   : $btn-primary-bg;
+$btn-default-color    : #ffffff;
+$btn-default-bg       : $brand-secondary;
+$btn-default-border   : $btn-default-bg;
+
+//== Forms
+
+$input-bg                : #ffffff;
+$input-color             : #555555;
+$input-border            : #d7d7d7;
+$input-border-focus      : $brand-primary;
+$input-color-placeholder : #999999;
+
+//== Dropdowns
+
+$dropdown-bg                : #ffffff;
+$dropdown-border            : $dropdown-bg;
+$dropdown-link-color        : #333333;
+$dropdown-link-hover-color  : $brand-primary;
+$dropdown-link-hover-bg     : transparent;
+$dropdown-link-active-color : $brand-primary;
+$dropdown-link-active-bg    : $dropdown-bg;
+
+//== Navbar
+
+$navbar-height                      : 65px;
+$navbar-margin-bottom               : 0;
+$navbar-border-radius               : 0;
+$navbar-padding-vertical            : 26px;
+$navbar-default-color               : white;
+$navbar-default-bg                  : $brand-primary;
+$navbar-default-border              : transparent;
+$navbar-default-link-color          : white;
+$navbar-default-link-hover-color    : #ddd;
+$navbar-default-link-hover-bg       : transparent;
+$navbar-default-link-active-color   : $navbar-default-link-color;
+$navbar-default-link-active-bg      : $navbar-default-link-hover-bg;
+$navbar-default-toggle-hover-bg     : lighten( $brand-primary, 45 );
+$navbar-default-toggle-icon-bar-bg  : $brand-primary;
+$navbar-default-toggle-border-color : $navbar-default-toggle-icon-bar-bg;
+
+//== Navs
+
+$nav-link-padding  : 10px 15px;
+$nav-link-hover-bg : transparent;
+
+//== Jumbotron
+
+$jumbotron-padding           : 0;
+$jumbotron-color             : inherit;
+$jumbotron-bg                : transparent;
+$jumbotron-heading-color     : inherit;
+$jumbotron-font-size         : $font-size-large;
+$jumbotron-heading-font-size : $font-size-h1;
+
+//== Alerts
+
+$alert-padding : 1em;
+
+//== Breadcrumbs
+
+$breadcrumb-padding-vertical   : 0.75em;
+$breadcrumb-padding-horizontal : 0;
+$breadcrumb-bg                 : transparent;
+$breadcrumb-color              : #828282;
+$breadcrumb-active-color       : #828282;
+$breadcrumb-separator          : "-";
+
+//== Blockquote
+
+$blockquote-small-color  : black;
+$blockquote-font-size    : 1em;
+
+//== Grid
+
+$grid-float-breakpoint : 992px;
+
+/**
+ * ----------------------------------------
+ * animation pulsate
+ * ----------------------------------------
+ */
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+@keyframes pulsate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0;
+  }
+  66% {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+  67% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.2);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(contain);
+  or object-fit and object-position:
+  @include object-fit(cover, top);
+*/
+@mixin object-fit($fit: fill, $position: null){
+  -o-object-fit: $fit;
+     object-fit: $fit;
+  @if $position {
+	  -o-object-position: $position;
+	     object-position: $position;
+  	font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+  	font-family: 'object-fit: #{$fit}';
+  }
+}
+
+/* 
+This is a mix-in to apply animation styles to elements that transition
+ex. @include transition(all,2s,ease-out);
+*/
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition:    $what $time $how;
+  -ms-transition:     $what $time $how;
+  -o-transition:      $what $time $how;
+  transition:         $what $time $how;
+}
+
+$nav_width: (95px * .75);
+$nav_padding: $nav_width * (20/95);

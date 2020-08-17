@@ -1,0 +1,106 @@
+// @import '../global/scss/vendor/slick.scss';
+// @import '../global/scss/vendor/bootstrap.scss';
+// @import '../global/scss/variables.scss';
+// //@import '../global/scss/global.scss';
+// @import '../01-module-global-header/main.scss';
+
+@import "../_global/scss/vendor/bootstrap-mixins.scss";
+@import '../_global/scss/variables.scss';
+
+.intro-work {
+
+  margin-top: -138px;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 138px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $white;
+  }
+
+  &__content {
+    padding-top: 109px;
+    padding-bottom: 76px;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -90px;
+      right: -15px;
+      bottom: 0;
+      background-color: $white;
+      z-index: -1;
+
+      @include media-breakpoint-down(md) {
+        left: -105px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        left: -38px;
+        right: -37px;
+      }
+    }
+
+    h2 {
+      font-family: "Mercury Text G2 A", "Mercury Text G2 B", serif;
+      font-size: 52px;
+      font-style: italic;
+      line-height: 0.77;
+      margin-bottom: 81px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 34px;
+        margin-bottom: 72px;
+      }
+    }
+
+    p {
+      margin-bottom: 26px;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .row {
+    position: relative;
+  }
+
+  &__img.col-md-6 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    max-width: 67.6%;
+
+    @media (max-width: 1366px) {
+      max-width: 50%;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 72%;
+      margin-top: 163px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 0;
+      position: static;
+      max-width: calc(100% + 75px);
+      flex: 0 0 calc(100% + 75px);
+      margin-left: -38px;
+    }
+  }
+}

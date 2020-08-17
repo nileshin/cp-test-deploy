@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="531px" height="800px" viewBox="0 0 531 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>C8194DB4-F97F-4A00-BD44-BA1EE415B51B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M531,800 C531,800.072837 531,1.70530257e-13 531,1.70530257e-13 C531,134.074005 1.15046777e-14,117.433114 0,400.5 C0,683.566886 531,683.566886 531,800 Z" id="path-1"></path>
+        <filter x="-3.8%" y="-2.5%" width="107.5%" height="105.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="15" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="10" dy="10" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="FinalPages" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="D.WorkLP" transform="translate(-909.000000, -465.000000)">
+            <g id="Modern-Brands-Intro" transform="translate(0.000000, 465.000000)">
+                <g id="Video-Teaser" transform="translate(909.000000, 0.000000)">
+                    <g id="BlobVideo">
+                        <mask id="mask-2">
+                            <rect x="0" y="0" width="531" height="800" fill="#ffffff" />
+                            <use xlink:href="#path-1" fill="black"></use>
+                        </mask>
+                        <g id="Oval">
+                            <rect x="0" y="0" width="531" height="800" fill="#fafafa" mask="url(#mask-2)" />
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

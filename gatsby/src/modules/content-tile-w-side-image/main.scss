@@ -1,0 +1,113 @@
+@import "../_global/scss/vendor/bootstrap-mixins.scss";
+@import '../_global/scss/variables.scss';
+
+.content {
+  padding: 160px 0;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 70px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 41px;
+    color: $brand-secondary;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 27px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 42px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 40px;
+      line-height: 1.05;
+      letter-spacing: -1.99px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 32px;
+      line-height: 1.07;
+      letter-spacing: -1.82px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-left: 4px;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 9px;
+    }
+
+    .icn {
+      margin-right: 13px;
+    }
+  }
+
+  .row {
+    position: relative;
+  }
+
+  .intro-work__img {
+    position: absolute;
+    top: 47px;
+    left: 55%;
+    max-width: 67.6%;
+    z-index: -1;
+
+    .content-img {
+      max-width: 100%;
+      img {
+        max-width: 80%;
+      }
+    }
+
+    @media (max-width: 1366px) {
+      max-width: 56.8%;
+      left: 55%;
+      top: 100px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 60%;
+      top: 65px;
+      left: 55%;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      top: 243px;
+      left: 61%;
+      transform: translateY(-50%);
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: static;
+      transform: none;
+      max-width: calc(100% + 75px);
+      flex: 0 0 calc(100% + 75px);
+      margin-left: -38px;
+      margin-top: 55px;
+    }
+  }
+
+  &__text {
+    @include media-breakpoint-down(md) {
+      width: 64%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 81%;
+    }
+  }
+}

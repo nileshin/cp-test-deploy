@@ -1,0 +1,17 @@
+@import "../_global/scss/vendor/bootstrap-mixins.scss";
+@import '../_global/scss/variables.scss';
+
+.section-header {
+  padding: 0 0 86px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 37px;
+    padding-bottom: 24px;
+  }
+
+  :last-child {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+}

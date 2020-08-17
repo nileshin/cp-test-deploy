@@ -1,0 +1,41 @@
+[Settings]
+
+[build]
+  base = "gatsby/"
+  publish = "gatsby/public"
+  command = "npm run build"
+  environment = { PANTHEON_ENV = "live" }
+  functions = "gatsby/functions/dist"
+
+# dev environment settings
+[context.dev]
+  environment = { PANTHEON_ENV = "dev" }
+
+# test environment settings
+[context.test]
+  environment = { PANTHEON_ENV = "test" }
+
+# master environment settings
+[context.production]
+  environment = { PANTHEON_ENV = "live" }
+
+[context."people-grid-transitions"]
+  environment = { PANTHEON_ENV = "dev" }
+
+[context.swashington]
+  environment = { PANTHEON_ENV = "dev" }
+
+[context.mlee]
+  environment = { PANTHEON_ENV = "mlee" }
+
+[context.mlee-v3]
+  environment = { PANTHEON_ENV = "mlee-v3" }
+
+[context.ewebster]
+  environment = { PANTHEON_ENV = "dev" }
+
+[context."grid-update"]
+  environment = { PANTHEON_ENV = "dev" }
+
+[context."blob-animation"]
+  environment = { PANTHEON_ENV = "dev" }

@@ -1,0 +1,122 @@
+@import '../_global/scss/vendor/bootstrap-mixins.scss';
+@import '../_global/scss/variables.scss';
+
+.home-banner {
+  padding-top: 50px;
+  padding-bottom: 119px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 166px;
+    padding-bottom: 166px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 83px;
+    padding-bottom: 83px;
+  }
+
+  &-img {
+    @include media-breakpoint-down(md) {
+      position: absolute;
+      left: 22px;
+      width: calc(100% + 35px);
+      top: -24px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-bottom: 24px;
+      position: static;
+      width: 100%;
+    }
+  }
+  .container{
+    .text{
+      display: flex;
+      align-items: center;
+    }
+
+  }
+  
+
+  h1,
+  p,
+  .cta {
+    transform: translate3d(0, 20px, 0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  p,
+  .cta {
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  h1 span {
+    opacity: 0;
+    animation: headlineAnimationIn 0.4s 0.1s ease-in-out forwards;
+
+    &.headline-2,
+    &.highlight {
+      transition-delay: 0.1s;
+      animation-delay: 1.5s;
+    }
+
+    &.headline-2 {
+      color: $brand-primary;
+    }
+  }
+
+  h1.no-anim span {
+    opacity: 1 !important;
+    animation: none;
+  }
+
+  p {
+    transition-delay: 0.15s;
+  }
+
+  .cta {
+    transition-delay: 0.19s;
+  }
+
+  .home-content {
+    &.entering,
+    &.entered {
+      h1,
+      p,
+      .cta {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+      h1 span {
+        opacity: 1;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      h1,
+      p,
+      .cta {
+        transform: translate3d(0, 0, 0) !important;
+      }
+    }
+  }
+}
+
+.home-content {
+  width: 90%;
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+  }
+}
+
+@keyframes headlineAnimationIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,120 @@
+@import "../_global/scss/vendor/bootstrap-mixins.scss";
+@import '../_global/scss/variables.scss';
+
+.content {
+  padding: 160px 0 109px;
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 70px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 120px;
+    padding-bottom: 0;
+  }
+
+  .eyebrow {
+    margin-bottom: 41px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 27px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 42px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 40px;
+      line-height: 1.05;
+      letter-spacing: -1.99px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 28px;
+      line-height: 1;
+      letter-spacing: -1.24px;
+    }
+  }
+
+  &-stats {
+
+    padding-bottom: 0;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 30px;
+    }
+
+    &__column {
+      @include media-breakpoint-down(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        // min-width: calc(100% + 32px);
+        // margin-left: -16px;
+        max-width: 100%;
+      }
+
+      @include media-breakpoint-down(xs) {
+        min-width: calc(100% + 65px);
+        margin-left: -32px;
+      }
+    }
+
+    &__row {
+      margin-bottom: 75px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 20px;
+        width: calc(50% - 6px);
+      }
+
+      &:last-child {
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+        }
+      }
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+
+      h3 {
+        padding-bottom: 22px;
+        border-bottom: 1px solid $white-alt;
+        padding-right: 32%;
+        margin-bottom: 24px;
+        color: $text-alt;
+
+        @include media-breakpoint-down(md) {
+          padding-bottom: 19px;
+          margin-bottom: 30px;
+        }
+        @include media-breakpoint-down(sm) {
+          padding-bottom: 16px;
+          margin-bottom: 19px;
+          padding-right: 0;
+          font-size: 21px;
+          line-height: 1;
+          letter-spacing: -1.2px;
+        }
+      }
+
+      .lg-text {
+        color: $red;
+
+        @include media-breakpoint-only(md) {
+          font-size: 58px;
+          line-height: 1.21;
+        }
+      }
+
+      &:nth-of-type(even) {
+        .lg-text {
+          color: $brand-secondary;
+        }
+      }
+    }
+  }
+}

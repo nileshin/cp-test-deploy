@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Weather/ScattredClouds</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Weather/ScattredClouds" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="transparent" x="0" y="0" width="24" height="24"></rect>
+        <path d="M16.8540004,8.06780397 C16.3661174,8.06780397 15.9003803,8.15787841 15.4655134,8.31550868 C14.6125569,6.64367246 12.8979196,5.5 10.9182015,5.5 C8.27678771,5.5 6.1031243,7.53281638 5.82529267,10.1436104 C4.24017597,10.3005583 3,11.6598635 3,13.3139578 C3,15.0738213 4.40325106,16.5 6.13399448,16.5 L16.8540004,16.5 C19.1437626,16.5 21,14.612531 21,12.2842432 C21,9.95527295 19.1437626,8.06780397 16.8540004,8.06780397" id="Fill-1" fill="#616161" fill-rule="nonzero"></path>
+    </g>
+</svg>

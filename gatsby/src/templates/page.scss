@@ -1,0 +1,42 @@
+@import "../modules/_global/scss/vendor/bootstrap-mixins.scss";
+@import '../modules/_global/scss/variables.scss';
+
+.page-template {
+    padding-top: 91px;
+    padding-bottom: 91px;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 150px;
+      padding-bottom: 87px;
+    }
+
+    .container {
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+
+
+    h2 {
+        font-size: 47px;
+        line-height: 1.07;
+        letter-spacing: -3.19px;
+        margin-bottom: 25px;
+
+        @include media-breakpoint-down(md) {
+            font-size: 40px;
+            line-height: 1.05;
+            letter-spacing: -1.99px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 28px;
+            line-height: 1;
+            letter-spacing: -1.24px;
+            margin-bottom: 3px;
+        }
+    }      
+
+}

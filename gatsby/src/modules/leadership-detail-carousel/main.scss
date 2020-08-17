@@ -1,0 +1,358 @@
+@import '../_global/scss/vendor/bootstrap-mixins.scss';
+@import '../_global/scss/variables.scss';
+
+.leaders {
+  .container {
+    @media (min-width: 1390px) {
+      max-width: 1390px;
+      padding-left: 65px;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 100%;
+      padding: 0 0 0 15%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .row {
+      @include media-breakpoint-down(md) {
+        margin: 0;
+      }
+    }
+
+    [class^='col-'] {
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
+    }
+  }
+
+  .offset-md-1 {
+    @media (max-width: 1390px) {
+      margin-left: 0;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 28.4%;
+      max-width: 28.4%;
+    }
+  }
+
+  .col-md-8 {
+    @media (max-width: 1390px) {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 calc(65% + 112px);
+      max-width: calc(65% + 112px);
+      margin-right: -72px;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex: 0 0 calc(71.6% + 30px);
+      max-width: calc(71.6% + 30px);
+      margin-right: -30px;
+    }
+  }
+
+  .leaders-name-column {
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .leader-details-column {
+    @include media-breakpoint-down(sm) {
+      width: calc(100% + 30px);
+      margin-left: -30px;
+      flex: 0 0 auto;
+      max-width: none;
+      margin-right: auto;
+    }
+  }
+}
+
+.leaders-list {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 95%;
+
+  @media (max-width: 1390px) {
+    width: 80%;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 100%;
+  }
+
+  li {
+    font-size: 18px;
+    line-height: 1.12;
+    font-weight: 700;
+    font-family: $font-family-sans-serif-alt;
+    letter-spacing: -0.79px;
+    border-bottom: 1px solid $white-alt;
+
+    &:first-child {
+      border-top: 1px solid $white-alt;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $text-alt;
+      display: table;
+      padding: 16px 0;
+      transition: color 0.3s ease-in-out, padding 0.3s ease-in-out;
+      display: block;
+
+      &.active {
+        color: $brand-secondary;
+      }
+      &:hover,
+      &:focus,
+      &.active {
+        padding-left: 30px;
+        @include media-breakpoint-down(md) {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.slider-leader {
+  border: 30px solid $white-alt;
+  position: relative;
+  transition: height 0.2s ease-in-out;
+  min-height: 800px;
+
+  .slick-arrow {
+    top: 590px;
+    height: 48px;
+    width: 66px;
+    z-index: 2;
+  }
+
+  .slick-next {
+    left: -30px;
+  }
+  .slick-prev {
+    left: -30px;
+    transform: translateX(-100%);
+  }
+
+  @include media-breakpoint-down(md) {
+    .slick-arrow {
+      top: 572px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .slick-arrow {
+      top: 196px;
+      width: 56px;
+      height: 40px;
+    }
+
+    .slick-next,
+    .slick-prev {
+      left: auto;
+      right: -30px;
+      transform: translateY(-50%);
+    }
+
+    .slick-prev {
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  &__item {
+    transition: opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    figcaption h2,
+    .leader-details > * {
+      transform: translate3d(20px, 0, 0);
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transition-delay: 0.1s;
+      opacity: 0;
+    }
+
+    .leader-details {
+      & > * {
+        transform: translate3d(0, 30px, 0);
+      }
+      .title {
+        transition-delay: 0.14s;
+      }
+      blockquote {
+        transition-delay: 0.18s;
+      }
+      .body-copy {
+        transition-delay: 0.22s;
+      }
+      .tenure {
+        transition-delay: 0.26s;
+      }
+    }
+
+    &.entering,
+    &.entered {
+      opacity: 1;
+
+      figcaption h2,
+      .leader-details .title,
+      .leader-details blockquote,
+      .leader-details .body-copy,
+      .leader-details .tenure {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+
+    &.exiting,
+    &.exited {
+      opacity: 0;
+    }
+  }
+}
+
+.leader-img {
+  padding-bottom: 40%;
+  height: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+  min-height: 320px;
+
+  @include media-breakpoint-down(sm) {
+    min-height: 196px;
+    padding-bottom: 56.25%;
+  }
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    opacity: 0.2;
+    z-index: 0;
+    content: '';
+
+    @include media-breakpoint-down(sm) {
+      opacity: 0.45;
+    }
+  }
+
+  .cover {
+    z-index: -2;
+  }
+
+  figcaption {
+    padding: 0 18.3%;
+    position: absolute;
+    bottom: 28px;
+
+    @include media-breakpoint-down(md) {
+      padding-right: 6%;
+      padding-left: 14.3%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-right: 6%;
+      padding-left: 18.1%;
+      bottom: 6px;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.leader-details {
+  padding: 24px 18.3% 55px;
+  color: $text-alt;
+
+  @include media-breakpoint-down(md) {
+    padding-right: 6%;
+    padding-left: 14.3%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 31px 9% 55px 17.8%;
+  }
+
+  blockquote {
+    margin-bottom: 36px;
+    color: $brand-primary;
+
+    @include media-breakpoint-down(sm) {
+      line-height: 1.1;
+      font-size: 21px;
+      letter-spacing: -1.2px;
+      margin-bottom: 42px;
+      padding-right: 5%;
+    }
+
+    p {
+      line-height: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      color: inherit;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.title {
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  font-style: italic;
+  font-weight: 700;
+  display: table;
+  margin-bottom: 19px;
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 22px;
+  }
+}
+
+.tenure {
+  font-size: 12px;
+  line-height: 1.17;
+  font-family: $font-family-sans-serif-alt;
+  display: table;
+  letter-spacing: -0.34px;
+  margin-top: 47px;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 37px;
+  }
+}

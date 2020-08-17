@@ -1,0 +1,199 @@
+@import '../_global/scss/vendor/bootstrap-mixins.scss';
+@import '../_global/scss/variables.scss';
+
+.stat {
+  padding: 110px 0 100px;
+
+  // .container {
+  //   @include media-breakpoint-down(sm) {
+  //     // width: 100%;
+  //   }
+  // }
+
+  &__head {
+    margin-bottom: 34px;
+    align-items: flex-end;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 38px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    color: $text-alt;
+    font-size: 28px;
+    line-height: 1.07142857;
+    font-family: $font-family-sans-serif-alt;
+    letter-spacing: -1.36px;
+    border-bottom: 1px solid $white-alt;
+    padding-bottom: 20px;
+    margin-bottom: 34px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 21px;
+      line-height: 1;
+      letter-spacing: -1.2px;
+      padding-bottom: 17px;
+    }
+  }
+
+  &-alt {
+    position: relative;
+    z-index: 1;
+
+    .container {
+      position: relative;
+      z-index: 1;
+
+      &.stat-row-container {
+        /* autoprefixer grid: no-autoplace */
+        display: grid;
+        grid-column-gap: 20px;
+        grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+
+        .stat__head,
+        .stat__content {
+          &[data-stat-index="0"] {
+            grid-column: 1;
+            -ms-grid-column: 1;
+          }
+
+          &[data-stat-index="1"] {
+            grid-column: 2;
+            -ms-grid-column: 3;
+          }
+
+          &[data-stat-index="2"] {
+            grid-column: 3;
+            -ms-grid-column: 5;
+          }
+          & > * {
+            width: 100%;
+            max-width: none;
+            flex: none;
+          }
+        }
+
+        .stat__head {
+          grid-row: 1;
+          -ms-grid-row: 1;
+        }
+
+        .stat__content {
+          grid-row: 2;
+          -ms-grid-row: 2;
+        }
+
+        @include media-breakpoint-down(xs) {
+          /* autoprefixer grid: no-autoplace */
+          grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr;
+
+          .stat__head, .stat__content {
+            grid-column: 1 !important;
+            -ms-grid-column: 1 !important;
+          }
+
+          .stat__head {
+            &[data-stat-index="0"] {
+              grid-row: 1;
+              -ms-grid-row: 1;
+            }
+            &[data-stat-index="1"] {
+              grid-row: 3;
+              -ms-grid-row: 3;
+            }
+            &[data-stat-index="2"] {
+              grid-row: 5;
+              -ms-grid-row: 5;
+            }
+          }
+          
+          .stat__content {
+            margin-bottom: 20px;
+            
+            &[data-stat-index="0"] {
+              grid-row: 2;
+              -ms-grid-row: 2;
+            }
+            &[data-stat-index="1"] {
+              grid-row: 4;
+              -ms-grid-row: 4;
+            }
+            &[data-stat-index="2"] {
+              grid-row: 6;
+              -ms-grid-row: 6;
+            }
+          }
+        }
+      }
+
+      & > svg {
+        position: absolute;
+        top: -193px;
+        left: -330px;
+        width: 629px;
+
+        @include media-breakpoint-down(lg) {
+          left: -410px;
+        }
+
+        @include media-breakpoint-down(md) {
+          top: -149px;
+          left: -461px;
+        }
+      }
+    }
+
+    // .stat__head {
+    //   >[class^="col-"]:nth-of-type(3n) {
+    //     @include media-breakpoint-down(sm) {
+    //       display: none;
+    //     }
+    //   }
+    // }
+
+    // .stat__content {
+    //   >[class^="col-"]:nth-of-type(3n) {
+
+    //     @include media-breakpoint-down(sm) {
+    //       display: none;
+    //     }
+    //   }
+    // }
+
+    &.has-blob {
+      position: static;
+      .container:before,
+      .container:after {
+        display: block;
+
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+
+    &.has-colors {
+      .stat__content {
+        .lg-text {
+          color: $brand-secondary;
+        }
+
+        &:nth-of-type(3n) {
+          .lg-text {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,90 @@
+// @import '../global/scss/vendor/slick.scss';
+// @import '../global/scss/vendor/bootstrap.scss';
+// @import '../global/scss/variables.scss';
+// //@import '../global/scss/global.scss';
+// @import '../01-module-global-header/main.scss';
+
+@import "../_global/scss/vendor/bootstrap-mixins.scss";
+@import '../_global/scss/variables.scss';
+
+.banner-full {
+
+  display: flex;
+  flex-wrap: wrap;
+  .cover{
+    position: absolute !important;
+  }
+  .container {
+    min-height: 990px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media-breakpoint-down(sm) {
+      min-height: 680px;
+    }
+  }
+
+  h1 {
+    font-size: 82px;
+    line-height: 1;
+    letter-spacing: -4.16px;
+    color: #0A0A0A;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 38px;
+      letter-spacing: -1.68px;
+    }
+  }
+  
+  &.dark-mode {
+    h1 {
+      color: $white;
+    }
+  }
+
+  &__content {
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .small-head {
+    font-size: 20px;
+    line-height: 1.05;
+    letter-spacing: -1.06px;
+    font-weight: 700;
+    font-style: italic;
+    color: $white;
+    padding: 4px 0;
+    display: table;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 27px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: -0.74px;
+      margin-bottom: 19px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: -23px;
+      background-color: $brand-secondary;
+      z-index: -1;
+      left: -19px;
+      transform: skewX(-18deg);
+
+      @include media-breakpoint-down(sm) {
+        left: -11px;
+        right: -16px;
+      }
+    }
+  }
+
+}

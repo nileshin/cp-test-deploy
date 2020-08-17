@@ -1,0 +1,145 @@
+@import '../_global/scss/vendor/bootstrap-mixins.scss';
+@import '../_global/scss/variables.scss';
+
+.content-alt {
+  padding: 101px 0 171px;
+  &:nth-of-type(2) {
+    padding-bottom: 60px;
+  }
+  &:nth-of-type(3) {
+    padding-top: 0;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 71px;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 48px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 23px;
+    padding-bottom: 90px;
+  }
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .flag {
+    display: table;
+    margin-top: 12px;
+
+    @include media-breakpoint-down(sm) {
+      width: 120px;
+      height: 4px;
+      margin-bottom: 27px;
+      display: block;
+    }
+  }
+
+  .row {
+    position: relative;
+  }
+
+  &__wrap {
+    margin-bottom: 93px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 83px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.left {
+      .container {
+        max-width: 1117px;
+
+        @include media-breakpoint-down(md) {
+          max-width: 565px;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: calc(100% - 75px);
+        }
+
+        .row {
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  &__text {
+    .right & {
+      padding: 65px 0;
+
+      @include media-breakpoint-down(lg) {
+        padding: 0;
+      }
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    .right & {
+      position: absolute;
+      left: 53.5%;
+      max-width: 55%;
+      top: 2px;
+
+      .content-img {
+        max-width: 100%;
+      }
+
+      @include media-breakpoint-down(lg) {
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 59%
+      }
+
+      @include media-breakpoint-down(md) {
+        left: 57.65%;
+        max-width: 57.6%;
+      }
+
+      @include media-breakpoint-down(sm) {
+        position: static;
+        transform: none;
+        max-width: calc(100% + 75px);
+        flex: 0 0 calc(100% + 75px);
+        margin-left: -38px;
+        margin-bottom: 29px;
+      }
+    }
+
+    .left & {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 52px;
+      }
+
+      figure {
+        width: 90%;
+
+        @include media-breakpoint-down(md) {
+          width: 95%;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    figure {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "name": "cp-com-3",
+  "private": true,
+  "description": "ConnellyPartners.com - Powered by Gatsby and Wordpress",
+  "version": "3.0.0-alpha",
+  "author": "Connelly Partners <development@connellypartners.com>",
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "@svgr/webpack": "^4.1.0",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.2.1",
+    "deep-map": "^2.0.0",
+    "dotenv": "^6.2.0",
+    "gatsby": "^2.1.4",
+    "gatsby-cli": "^2.4.9",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-google-tagmanager": "^2.0.9",
+    "gatsby-plugin-layout": "^1.0.12",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-robots-txt": "^1.4.0",
+    "gatsby-plugin-sass": "^2.0.8",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-plugin-sitemap": "^2.0.9",
+    "gatsby-plugin-svgr": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.20",
+    "gatsby-source-wordpress": "^3.0.35",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "get-video-id": "^3.1.0",
+    "html-react-parser": "^0.6.1",
+    "http-proxy-middleware": "^0.19.1",
+    "jquery": "^3.3.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.get": "^4.4.2",
+    "lodash.shuffle": "^4.2.0",
+    "moment-timezone": "^0.5.23",
+    "netlify-lambda": "^1.3.3",
+    "node-sass": "^4.11.0",
+    "object-fit-images": "^3.2.4",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-cookie-consent": "^2.2.2",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "react-juicer-feed": "0.0.2-alpha",
+    "react-player": "^1.9.3",
+    "react-transition-group": "^2.5.3",
+    "react-vimeo": "^2.0.0",
+    "react-youtube": "^7.9.0",
+    "snapsvg": "^0.5.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build && netlify-lambda build functions",
+    "build:lando": "USE_LANDO=true gatsby build",
+    "build:functions": "netlify-lambda build functions",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "functions": "netlify-lambda serve functions"
+  },
+  "devDependencies": {
+    "imports-loader": "^0.8.0",
+    "prettier": "^1.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "ie 11"
+  ]
+}
